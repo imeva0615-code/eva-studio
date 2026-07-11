@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67V57KLVCW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-67V57KLVCW');
+</script>
+<title>Eva Studio · 品牌與行銷策略陪伴</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15211d;
+    --ink-soft:#2b3733;
+    --paper:#efe9d8;
+    --paper-dim:#e3dcc7;
+    --card:#faf7ee;
+    --brass:#b8863b;
+    --brass-deep:#8f6526;
+    --slate:#5d6b64;
+    --white:#fdfbf4;
+    --line:rgba(21,33,29,0.14);
+    --line-dark:rgba(253,251,244,0.16);
+    --serif:"Fraunces","Noto Serif TC",serif;
+    --sans:"Inter","Noto Sans TC",sans-serif;
+    --mono:"IBM Plex Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none !important;transition:none !important}}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  a{color:inherit}
+  button:focus-visible,a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(239,233,216,0.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+  .logo{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:.02em}
+  .logo span{color:var(--brass-deep)}
+  .nav-links{display:flex;gap:30px;font-size:14px;color:var(--ink-soft)}
+  .nav-links a{text-decoration:none;position:relative}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{background:var(--ink);color:var(--white);border:none;padding:10px 20px;border-radius:3px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+  .nav-cta:hover{background:var(--ink-soft)}
+  @media (max-width:720px){.nav-links{display:none}}
+
+  /* HERO */
+  header.hero{padding:96px 0 84px;position:relative;overflow:hidden}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--brass-deep);text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:28px}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--brass-deep)}
+
+  .markup{max-width:760px}
+  .markup .old{
+    font-family:var(--serif);font-weight:500;font-size:clamp(22px,3.4vw,32px);
+    color:var(--slate);text-decoration:line-through;text-decoration-color:rgba(93,107,100,.55);
+    text-decoration-thickness:2px;margin-bottom:14px;opacity:0;animation:reveal .7s ease forwards;
+  }
+  .markup .new{
+    font-family:var(--serif);font-weight:600;font-size:clamp(32px,5.2vw,54px);line-height:1.2;
+    color:var(--ink);opacity:0;animation:reveal .7s ease .5s forwards;
+  }
+  .markup .new mark{background:none;color:inherit;position:relative;white-space:nowrap}
+  .markup .new mark::after{content:"";position:absolute;left:-2px;right:-2px;bottom:2px;height:9px;background:var(--brass);opacity:.38;z-index:-1;transform:scaleX(0);transform-origin:left;animation:underline .5s ease 1.15s forwards}
+  @keyframes reveal{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes underline{to{transform:scaleX(1)}}
+  @media (prefers-reduced-motion: reduce){.markup .old,.markup .new{opacity:1;animation:none}.markup .new mark::after{transform:scaleX(1);animation:none}}
+
+  @media (max-width:640px){.hero h1 span{white-space:normal !important}}
+  .hero-sub{margin-top:30px;max-width:520px;font-size:16.5px;color:var(--ink-soft)}
+  .hero-cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:3px;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border:1px solid transparent;font-family:var(--sans);transition:transform .12s}
+  .btn:active{transform:scale(.98)}
+  .btn-primary{background:var(--ink);color:var(--white)}
+  .btn-primary:hover{background:var(--ink-soft)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn-ghost:hover{background:rgba(21,33,29,.06)}
+
+  .margin-note{position:absolute;right:0;top:120px;width:200px;font-family:var(--mono);font-size:12px;color:var(--slate);line-height:1.6;display:none}
+  .margin-note .pin{color:var(--brass-deep);font-weight:700}
+  @media (min-width:1040px){.margin-note{display:block}}
+
+  /* SECTION SHELL */
+  section{padding:76px 0}
+  .section-head{max-width:600px;margin-bottom:48px}
+  .section-title{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.2vw,36px);line-height:1.3}
+  .section-desc{margin-top:14px;color:var(--ink-soft);font-size:15.5px}
+
+  /* SERVICES */
+  #services{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper)}
+  .tier{padding:32px 28px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+  .tier:last-child{border-right:none}
+  .tier.featured{background:var(--ink);color:var(--white)}
+  .tier.featured .tier-tag,.tier.featured .tier-desc,.tier.featured .tier-for{color:rgba(253,251,244,.72)}
+  .tier.featured .tier-list li::before{color:var(--brass)}
+  .tier-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--brass-deep);text-transform:uppercase}
+  .tier-name{font-family:var(--serif);font-weight:600;font-size:22px;margin:10px 0 6px}
+  .tier-price{font-family:var(--mono);font-size:13.5px;color:var(--slate);margin-bottom:16px}
+  .tier.featured .tier-price{color:rgba(253,251,244,.6)}
+  .tier-for{font-size:13.5px;color:var(--ink-soft);margin-bottom:18px;line-height:1.6}
+  .tier-list{list-style:none;flex:1}
+  .tier-list li{font-size:14px;padding-left:18px;position:relative;margin-bottom:10px;color:inherit}
+  .tier-list li::before{content:"—";position:absolute;left:0;color:var(--brass-deep)}
+  @media (max-width:800px){.tiers{grid-template-columns:1fr}.tier{border-right:none;border-bottom:1px solid var(--line)}.tier:last-child{border-bottom:none}}
+
+  /* PROCESS */
+  .process{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+  .proc-step{position:relative;padding-top:20px}
+  .proc-num{font-family:var(--mono);font-size:13px;color:var(--brass-deep);border-top:1px solid var(--ink);padding-top:10px;display:block}
+  .proc-title{font-family:var(--serif);font-weight:600;font-size:20px;margin:14px 0 8px}
+  .proc-desc{font-size:14.5px;color:var(--ink-soft)}
+  @media (max-width:760px){.process{grid-template-columns:1fr;gap:28px}}
+
+  /* CASE STUDIES */
+  #cases{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cases{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .case-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:30px}
+  .case-tag{font-family:var(--mono);font-size:11.5px;color:var(--brass-deep);text-transform:uppercase;letter-spacing:.06em}
+  .case-title{font-family:var(--serif);font-weight:600;font-size:21px;margin:12px 0 14px}
+  .case-body{font-size:14.5px;color:var(--ink-soft);margin-bottom:18px}
+  .case-stats{display:flex;gap:24px;border-top:1px dashed var(--line);padding-top:16px}
+  .case-stat b{display:block;font-family:var(--serif);font-size:24px;color:var(--ink)}
+  .case-stat span{font-size:12px;color:var(--slate)}
+  @media (max-width:760px){.cases{grid-template-columns:1fr}}
+  .case-placeholder-flag{margin-top:22px;font-family:var(--mono);font-size:12px;color:var(--brass-deep);border:1px dashed var(--brass);border-radius:3px;padding:10px 14px;background:rgba(184,134,59,.07)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+  .about-text p{margin-bottom:16px;font-size:15.5px;color:var(--ink-soft)}
+  .about-facts{border-left:2px solid var(--brass);padding-left:22px}
+  .fact{margin-bottom:20px}
+  .fact b{display:block;font-family:var(--serif);font-size:15.5px;margin-bottom:3px}
+  .fact span{font-size:13.5px;color:var(--slate)}
+  @media (max-width:800px){.about-grid{grid-template-columns:1fr;gap:36px}}
+
+  /* CONTACT */
+  #contact{background:var(--ink);color:var(--white)}
+  #contact .eyebrow{color:var(--brass)}
+  #contact .eyebrow::before{background:var(--brass)}
+  #contact .section-title{color:var(--white)}
+  #contact .section-desc{color:rgba(253,251,244,.68)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .contact-block{background:rgba(253,251,244,.05);border:1px solid var(--line-dark);border-radius:4px;padding:28px}
+  .contact-block h3{font-family:var(--serif);font-weight:600;font-size:19px;margin-bottom:8px}
+  .contact-block p{font-size:14px;color:rgba(253,251,244,.65);margin-bottom:20px}
+  .calendly-slot{border:1px dashed var(--line-dark);border-radius:4px;min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--mono);font-size:12.5px;color:rgba(253,251,244,.5);padding:20px}
+  form.contact-form{display:flex;flex-direction:column;gap:14px}
+  form.contact-form input,form.contact-form textarea{
+    background:rgba(253,251,244,.08);border:1px solid var(--line-dark);border-radius:3px;
+    padding:12px 14px;color:var(--white);font:inherit;font-size:14px
+  }
+  form.contact-form input::placeholder,form.contact-form textarea::placeholder{color:rgba(253,251,244,.4)}
+  form.contact-form textarea{min-height:96px;resize:vertical}
+  form.contact-form button{margin-top:4px}
+  @media (max-width:800px){.contact-grid{grid-template-columns:1fr}}
+
+  footer{padding:32px 0;border-top:1px solid var(--line);font-size:13px;color:var(--slate);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">EVA <span>STUDIO</span></div>
+    <div class="nav-links">
+      <a href="#services">服務項目</a>
+      <a href="#cases">案例</a>
+      <a href="#about">關於</a>
+    </div>
+    <button class="nav-cta" onclick="if(window.gtag)gtag('event','cta_click',{cta_location:'nav'});document.getElementById('contact').scrollIntoView()">預約時間聊聊</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap" style="position:relative">
+    <div class="eyebrow">品牌與行銷策略陪伴</div>
+    <h1 style="font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.8vw,42px);line-height:1.35;max-width:820px;color:var(--ink);white-space:normal">
+      從商業目標出發<br><span style="white-space:nowrap">用數位行銷讓更多人看見品牌的好</span>
+    </h1>
+    <p class="hero-sub">20 年跨品牌行銷、數位行銷與專案管理實戰經驗。擅長把商業願景轉化為可執行的策略，從提案、簽約到落地執行，全程參與——不只是給建議，是陪你做到。</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="if(window.gtag)gtag('event','cta_click',{cta_location:'hero_primary'});document.getElementById('contact').scrollIntoView()">一對一陪伴規劃 →</button>
+      <a class="btn btn-ghost" href="#cases" onclick="if(window.gtag)gtag('event','cta_click',{cta_location:'hero_secondary_cases'})">先看案例</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">服務項目</div>
+      <h2 class="section-title">三種合作方式，依需求任選其一</h2>
+      <p class="section-desc">以下三種是各自獨立的合作模式，依你現在最需要處理的問題直接選擇其中一種即可——不需要照順序進行。<br>海外／英語客戶請透過 Upwork 洽詢 → <a href="https://www.upwork.com/freelancers/~01e787676d2a8da912" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','upwork_link_click')" style="color:var(--brass-deep);font-weight:600">English clients, please reach out via Upwork</a></p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-tag">單次診斷</div>
+        <div class="tier-name">品牌／社群健檢</div>
+        <div class="tier-price">一次性 · 5–7 個工作天交付</div>
+        <div class="tier-for">適合：還沒想清楚品牌該往哪走、需要一份清楚方向的人</div>
+        <ul class="tier-list">
+          <li>現有社群表現健檢報告</li>
+          <li>品牌定位與競品盤點</li>
+          <li>5 項優先改善行動建議</li>
+        </ul>
+      </div>
+      <div class="tier featured">
+        <div class="tier-tag">月費陪跑</div>
+        <div class="tier-name">內容陪跑</div>
+        <div class="tier-price">月費制 · NT$25,000 起／月</div>
+        <div class="tier-for">適合：內容量已經有，但方向凌亂、缺乏系統的人</div>
+        <ul class="tier-list">
+          <li>每月內容策略與排程（8 篇起）</li>
+          <li>社群貼文企劃與文案</li>
+          <li>成效追蹤與優化建議</li>
+          <li>可加購 Reels／短影音製作</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="tier-tag">深度規劃</div>
+        <div class="tier-name">一對一陪伴規劃</div>
+        <div class="tier-price">依專案報價 · 3–6 個月計畫</div>
+        <div class="tier-for">適合：正面臨重大決策（新產品、轉型、重新定位）需要一起想清楚的人</div>
+        <ul class="tier-list">
+          <li>一對一深度共創會議</li>
+          <li>完整品牌定位＋內容策略</li>
+          <li>階段性檢核與可落地計畫</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">合作方式</div>
+      <h2 class="section-title">三個階段，逐步把方向釐清</h2>
+    </div>
+    <div class="process">
+      <div class="proc-step">
+        <span class="proc-num">01 — 理解</span>
+        <div class="proc-title">先搞懂現在的卡點</div>
+        <p class="proc-desc">盤點現有品牌資產、內容與過往成效，找出真正卡住的地方，而不是急著給答案。</p>
+      </div>
+      <div class="proc-step">
+        <span class="proc-num">02 — 釐清</span>
+        <div class="proc-title">把方向寫成一句話</div>
+        <p class="proc-desc">將複雜的想法收斂成一個清楚的定位與訊息架構，讓團隊內外都能複述、都能對齊。</p>
+      </div>
+      <div class="proc-step">
+        <span class="proc-num">03 — 落地</span>
+        <div class="proc-title">交付可執行的下一步</div>
+        <p class="proc-desc">不是一份束之高閣的簡報，而是一份你明天就能開始照著做的行動清單。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">案例研究</div>
+      <h2 class="section-title">實際合作過的品牌與成果</h2>
+    </div>
+    <div class="cases">
+      <div class="case-card">
+        <div class="case-tag">案例一 · 電商／美妝</div>
+        <div class="case-title">整合社群＋電商campaign</div>
+        <p class="case-body">在各電商平台快速進行行銷實驗，持續迭代創意與受眾定向，找出真正有效的組合再集中資源投入。</p>
+        <div class="case-stats">
+          <div class="case-stat"><b>100%</b><span>3 個月內銷售額成長</span></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">案例二 · 長照／公益</div>
+        <div class="case-title">疫情期間轉型 O2O 數位募款</div>
+        <p class="case-body">COVID-19 期間，將原本仰賴線下的募款活動全面轉為 O2O 數位模式，重新設計溝通內容與捐款路徑。</p>
+        <div class="case-stats">
+          <div class="case-stat"><b>100%</b><span>募款目標達成率</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">關於 Eva Studio</div>
+      <h2 class="section-title">一個人的品牌與行銷策略工作室</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Eva Studio 由擁有 20 年以上行銷實戰經驗的品牌策略顧問一人經營，服務對象是正在成長、需要把行銷想法變成可執行策略的品牌與創業者。</p>
+        <p>不同於單純提供建議的顧問服務，這裡更像是「陪伴規劃」——一起把模糊的方向討論清楚，再共同確認每一步該怎麼落地。</p>
+        <p>目前同時經營自有品牌 GlowUp Women，從零開始的內容策略、社群成長、名單累積，都是這套方法論持續被驗證的現場。</p>
+      </div>
+      <div class="about-facts">
+        <div class="fact"><b>20+ 年</b><span>跨品牌行銷、數位行銷與專案管理經驗</span></div>
+        <div class="fact"><b>NT$100K–10M+</b><span>從提案到執行完整管理過的行銷專案規模</span></div>
+        <div class="fact"><b>中英雙語</b><span>服務台灣／亞太品牌，也能與國際客戶無障礙溝通</span></div>
+        <div class="fact"><b>AI-Native</b><span>獨立建構並測試 AI 工作流程，加速內容產出與市場研究</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">開始合作</div>
+    <h2 class="section-title">先約 30 分鐘，聊聊你現在的狀況</h2>
+    <p class="section-desc">不管是還在想方向，還是已經知道要做什麼，都可以先聊聊看適合怎麼合作。</p>
+    <div class="contact-grid" style="margin-top:40px">
+      <div class="contact-block">
+        <h3>預約時間</h3>
+        <p>選一個你方便的時段，我們線上聊 30 分鐘。</p>
+        <div class="calendly-slot" style="border:none;padding:0;min-height:auto">
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/lmeva0615/30min?primary_color=b8863b" style="min-width:280px;height:650px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <script>
+            window.addEventListener('message', function(e){
+              if(e.data && e.data.event === 'calendly.event_scheduled' && window.gtag){
+                gtag('event','calendly_booking_completed');
+              }
+            });
+          </script>
+          <!-- Calendly inline widget end -->
+        </div>
+      </div>
+      <div class="contact-block">
+        <h3>先留言給我</h3>
+        <p>簡單說說你的品牌現況與需求，我會盡快回覆。</p>
+        <form class="contact-form" action="https://formspree.io/f/xvzjejyo" method="POST" onsubmit="if(window.gtag)gtag('event','contact_form_submit')">
+          <input type="text" name="name" placeholder="你的名字" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="想聊聊的品牌狀況或需求"></textarea>
+          <button class="btn btn-primary" type="submit">送出</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;width:100%">
+    <span>© 2026 Eva Studio</span>
+    <span>品牌與行銷策略陪伴</span>
+  </div>
+</footer>
+
+</body>
+</html>

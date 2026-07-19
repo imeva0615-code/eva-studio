@@ -124,7 +124,7 @@
 
   /* CASE STUDIES */
   #cases{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .cases{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .cases{display:grid;grid-template-columns:1fr;gap:24px}
   .case-card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:30px}
   .case-card.has-media{grid-column:1 / -1;display:flex;flex-direction:row;padding:0;overflow:hidden}
   .case-media{flex:0 0 38%;overflow:hidden}
@@ -193,7 +193,7 @@
     <h1 style="font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.8vw,42px);line-height:1.35;max-width:820px;color:var(--ink);white-space:normal">
       從商業目標出發<br><span style="white-space:nowrap">用數位行銷讓更多人看見品牌的好</span>
     </h1>
-    <p class="hero-sub">23 年跨品牌行銷、數位行銷與專案管理實戰經驗。擅長把商業願景轉化為可執行的策略，從提案、簽約到落地執行，全程參與——不只是給建議，是陪你做到。</p>
+    <p class="hero-sub">23 年跨品牌行銷、數位行銷與專案管理實戰經驗。擅長把商業願景轉化為可執行的策略，從提案、簽約到落地執行。</p>
     <div class="hero-cta">
       <button class="btn btn-primary" onclick="if(window.gtag)gtag('event','cta_click',{cta_location:'hero_primary'});document.getElementById('contact').scrollIntoView()">一對一陪伴規劃 →</button>
       <a class="btn btn-ghost" href="#cases" onclick="if(window.gtag)gtag('event','cta_click',{cta_location:'hero_secondary_cases'})">先看案例</a>
@@ -206,7 +206,10 @@
     <div class="section-head">
       <div class="eyebrow">服務項目</div>
       <h2 class="section-title">三種合作方式，依需求任選其一</h2>
-      <p class="section-desc">以下三種是各自獨立的合作模式，依你現在最需要處理的問題直接選擇其中一種即可——不需要照順序進行。<br>海外／英語客戶請透過 Upwork 洽詢 → <a href="https://www.upwork.com/freelancers/~01e787676d2a8da912" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','upwork_link_click')" style="color:var(--brass-deep);font-weight:600">English clients, please reach out via Upwork</a></p>
+      <p class="section-desc">以下三種是各自獨立的合作模式，依你現在最需要處理的問題直接選擇其中一種即可——不需要照順序進行。<br>
+        海外／英語客戶請透過 Upwork 洽詢<br>
+        <span style="color:var(--slate)">For international / English-speaking clients, please reach out via</span> <a href="https://www.upwork.com/freelancers/~01e787676d2a8da912" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','upwork_link_click')" style="color:var(--brass-deep);font-weight:600">Upwork</a>
+      </p>
     </div>
     <div class="tiers">
       <div class="tier">
@@ -296,11 +299,12 @@
         </div>
       </div>
       <div class="case-card">
-        <div class="case-tag">案例二 · 社福機構</div>
-        <div class="case-title">疫情期間轉型 O2O，公益募款目標達成 100%</div>
-        <p class="case-body">擔任行銷企畫，負責募款專案的企劃與執行。COVID-19 期間，將原本仰賴實體的募款活動全面轉型為 O2O 整合模式，重新設計線上活動、文案與社群推廣策略，提升公益活動觸及率與贊助人數。</p>
+        <div class="case-tag">案例二 · 智能行銷顧問公司</div>
+        <div class="case-title">自建 AI 自動化工作流，以精簡人力同時掌控多規模專案</div>
+        <p class="case-body">擔任總經理行銷特助暨專案經理，獨立導入 AI 工具建立自動化市場分析與內容生成系統，縮短專案前置期，讓精簡團隊也能同時支援多規模專案產出。橫跨敏捷測試案與大型整合案兩種量級，擔任專案總指揮，統籌行銷、技術、設計跨職能團隊，確保資源精準投放於關鍵績效指標；同時優化跨部門溝通流程、建立協作 SOP，即使在市場節奏頻繁變動下仍能穩定交付成果。</p>
         <div class="case-stats">
-          <div class="case-stat"><b>100%</b><span>1 年內達成募款目標</span></div>
+          <div class="case-stat"><b>80 倍</b><span>同時橫跨的專案規模跨距(從敏捷測試案到大型整合案)</span></div>
+          <div class="case-stat"><b>1 人</b><span>導入 AI 工作流後，仍可同步支援多規模專案產出</span></div>
         </div>
       </div>
       <div class="case-card">
@@ -309,6 +313,15 @@
         <p class="case-body">擔任品牌內容策略師與視覺設計，為東方點石成金文創志業規劃活動視覺與每月內容。製作 14 週年開幕活動的邀請函與倒數視覺，設計一系列把 MBTI 人格類型轉譯為職涯／生活風格洞察的 IG 輪播內容，並負責 Podcast 節目封面與每集圖像設計，維持主持人個人品牌調性一致。</p>
         <div class="case-stats">
           <div class="case-stat"><b>3 種形式</b><span>活動視覺、IG 內容系列、Podcast 視覺整合執行</span></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">案例四 · 傳統工藝甜點品牌 · 獨立顧問提案</div>
+        <div class="case-title">以極致視覺換取演算法流量，打造和菓子品牌的三層轉換漏斗</div>
+        <p class="case-body">獨立接案擔任行銷顧問，為傳統工藝和菓子品牌規劃 AI 時代的社群突圍策略。以職人製作細節的解壓視覺作為 3 秒抓住眼球的鉤子，結合每顆和菓子背後的季節與文化故事建立情感共鳴，設計具高分享價值的社群美學排版。雙引擎驅動社群日常經營(視覺定調、圖文企劃、粉絲互動)與 Reels 短影音(爆款腳本、動態攝影剪輯、熱門音軌與標籤策略)，並疊加精準廣告投放作為轉換加速器，把陌生流量逐層沉澱為品牌信任，再導向實質訂單。</p>
+        <div class="case-stats">
+          <div class="case-stat"><b>3 層</b><span>從自然曝光到精準轉換的完整漏斗設計</span></div>
+          <div class="case-stat"><b>2 引擎</b><span>社群日常經營 × Reels 短影音雙軌驅動</span></div>
         </div>
       </div>
     </div>
@@ -381,4 +394,6 @@
 </footer>
 
 </body>
+</html>
+
 </html>

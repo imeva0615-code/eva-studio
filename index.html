@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -57,7 +58,7 @@ h1{font-size:clamp(28px,5.2vw,62px)}
 h2{font-size:clamp(27px,4.2vw,48px)}
 h3{font-size:clamp(19px,2.3vw,26px);font-weight:600}
 .lede{font-size:clamp(15.5px,1.4vw,18px);color:var(--slate);max-width:56ch;line-height:1.9}
-  @media(max-width:600px){.lede-break{display:none}}
+@media(max-width:600px){.lede-break{display:none}}
 
 nav{position:sticky;top:0;z-index:50;background:rgba(239,233,216,.94);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -118,31 +119,30 @@ section{padding:clamp(68px,9.5vw,124px) 0}
 .prob h3{margin-bottom:11px}
 .prob p{color:var(--slate);font-size:15px;line-height:1.85}
 
-.svc-wrap{border-top:1.5px solid var(--ink)}
-.svc{border-bottom:1px solid var(--line);padding:clamp(32px,4.6vw,50px) clamp(0px,2vw,16px);
-  transition:padding-left .3s,background .3s}
-.svc:hover{padding-left:12px;background:var(--white)}
-.svc-top{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start;margin-bottom:20px}
-.svc-title{display:flex;align-items:baseline;gap:15px;flex-wrap:wrap}
-.svc-title h3{font-size:clamp(22px,3vw,33px);font-weight:700;position:relative;display:inline-block}
+.svc-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);border-top:1.5px solid var(--ink)}
+@media(max-width:860px){.svc-wrap{grid-template-columns:1fr}}
+.svc{background:var(--card);padding:clamp(28px,3vw,38px) clamp(24px,2.6vw,32px);
+  display:flex;flex-direction:column;transition:background .3s}
+.svc:hover{background:var(--white)}
+.svc-kicker{font-family:var(--sans);font-size:12.5px;color:var(--slate);margin-bottom:10px}
+.svc-title h3{font-size:clamp(19px,2vw,22px);font-weight:700;position:relative;display:inline-block;margin-bottom:16px}
 .svc-title h3::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-4px;
   border-bottom:2.5px solid var(--brass);border-radius:3px;
   transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.65,0,.35,1)}
 .svc:hover .svc-title h3::after{transform:scaleX(1)}
-.svc-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--brass-deep);
-  border:1px solid var(--brass);padding:3px 12px;border-radius:2px}
-.svc-price{text-align:right;white-space:nowrap}
-.svc-price .amt{display:block;font-family:var(--serif);font-size:clamp(20px,2.7vw,29px);
+.svc-price{margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.svc-price .amt{display:block;font-family:var(--serif);font-size:clamp(22px,2.4vw,26px);
   font-weight:700;letter-spacing:-.01em}
-.svc-price .term{display:block;font-family:var(--mono);font-size:11.5px;color:var(--slate);margin-top:5px}
-@media(max-width:700px){.svc-top{grid-template-columns:1fr}.svc-price{text-align:left}}
-.svc-body{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(20px,4vw,56px)}
-@media(max-width:860px){.svc-body{grid-template-columns:1fr}}
-.svc-body>p{color:var(--slate);font-size:15px;max-width:34ch}
-.svc-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:9px 32px}
-.svc-list li{font-size:14.5px;padding-left:20px;position:relative;color:var(--ink-soft);line-height:1.7}
-.svc-list li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:1.5px;background:var(--brass)}
-.svc-foot{margin-top:22px;font-size:13.5px;color:var(--slate)}
+.svc-price .term{display:block;font-family:var(--sans);font-size:12.5px;color:var(--slate);margin-top:5px;font-weight:400}
+.svc-body{flex:1;display:flex;flex-direction:column}
+.svc-body>p{color:var(--slate);font-size:14.5px;margin-bottom:16px}
+.svc-note{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--ink-soft);
+  line-height:1.75;margin:0 0 16px;padding-left:14px;border-left:2px solid var(--brass)}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:0}
+.svc-list li{font-size:13.5px;padding-left:18px;position:relative;color:var(--ink-soft);line-height:1.6}
+.svc-list li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1.5px;background:var(--brass)}
+.svc-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--slate)}
 
 .process{background:#15211d;color:var(--white)}
 .process .eyebrow{color:var(--brass)}
@@ -253,7 +253,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brass);outline-of
     <div class="nav-links">
       <a href="#services">服務</a>
       <a href="#process">合作流程</a>
-     <a href="#cases">實戰經歷</a>
+      <a href="#cases">實戰經歷</a>
       <a href="#about">關於</a>
       <a href="#contact" class="btn-sm">先聊 30 分鐘</a>
     </div>
@@ -330,61 +330,58 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brass);outline-of
 
     <div class="svc-wrap">
       <article class="svc rv">
-        <div class="svc-top">
-          <div class="svc-title"><h3>品牌內容診斷</h3><span class="svc-tag">單次</span></div>
-         <div class="svc-price"><span class="amt">NT$18,000 起</span><span class="term">7–10 個工作天</span></div>
-        </div>
+        <div class="svc-kicker">單次診斷</div>
+        <div class="svc-title"><h3>品牌內容診斷</h3></div>
+        <div class="svc-price"><span class="amt">NT$18,000 起</span><span class="term">7–10 個工作天</span></div>
         <div class="svc-body">
           <p>適合還不確定方向，想先把問題釐清的人。</p>
           <ul class="svc-list">
             <li>現有內容與社群健檢</li>
             <li>品牌定位與競品盤點</li>
-            <li>受眾分析：你的客人在什麼情境下會需要你</li>
-            <li>3–5 個內容支柱，每個給你 10 個可用選題</li>
-            <li>5 項優先改善行動建議</li>
+            <li>受眾分析：客人何時會需要你</li>
+            <li>3–5 個內容支柱，各 10 個選題</li>
+            <li>5 項優先改善建議</li>
             <li>3 則範例貼文</li>
           </ul>
         </div>
       </article>
 
       <article class="svc rv">
-        <div class="svc-top">
-          <div class="svc-title"><h3>內容共創夥伴</h3><span class="svc-tag">每月</span></div>
-                    <div class="svc-price"><span class="amt">NT$30,000 / 月起</span><span class="term">建議六個月為一期</span></div>
-        </div>
+        <div class="svc-kicker">每月合作</div>
+        <div class="svc-title"><h3>內容共創夥伴</h3></div>
+        <div class="svc-price"><span class="amt">NT$30,000 / 月起</span><span class="term">建議六個月為一期</span></div>
         <div class="svc-body">
           <p>適合已有內容產出，但缺方向與品質標準的品牌。</p>
-          <p style="color:var(--slate);font-size:14px;line-height:1.8;margin-bottom:16px">內容行銷類的合作，產業普遍以 6 個月以上為一個週期——時間太短，系統還沒發揮複利效果，雙方都容易做錯判斷。</p>
+          <p class="svc-note">內容行銷通常要 6 個月以上才看得出成效，太短反而讓雙方都做錯判斷。</p>
           <ul class="svc-list">
-            <li>每月一次策略會議（60–90 分鐘）</li>
+            <li>每月策略會議（60–90 分鐘）</li>
             <li>當月選題規劃表</li>
             <li>示範貼文 5 則</li>
             <li>短影音腳本 2 支</li>
             <li>貼文與視覺模板</li>
-            <li>內容審核與修改建議（每月 10 則）</li>
-            <li>月末成效檢視與下月調整建議</li>
+            <li>內容審核（每月 10 則）</li>
+            <li>月末成效檢視與調整</li>
           </ul>
+          <p class="svc-foot">可加購：短影音企劃、平台擴充、跨團隊統籌。</p>
         </div>
-        <p class="svc-foot">可加購：短影音企劃、平台擴充、跨團隊統籌。</p>
       </article>
 
       <article class="svc rv">
-        <div class="svc-top">
-          <div class="svc-title"><h3>AI 內容工作流導入</h3><span class="svc-tag">專案</span></div>
-         <div class="svc-price"><span class="amt">NT$50,000 起</span><span class="term">4 週</span></div>
-        </div>
+        <div class="svc-kicker">專案制</div>
+        <div class="svc-title"><h3>AI 內容工作流導入</h3></div>
+        <div class="svc-price"><span class="amt">NT$50,000 起</span><span class="term">4 週</span></div>
         <div class="svc-body">
           <p>適合小團隊、想提升產出效率的。</p>
           <ul class="svc-list">
-            <li>診斷現有流程中最耗時的環節</li>
-            <li>設計選題到分發的完整工作流</li>
-            <li>用你的品牌語氣校準過的 Prompt 模板庫</li>
-            <li>內容再利用鏈：一個原創單位變成多則產出</li>
+            <li>診斷流程中最耗時的環節</li>
+            <li>設計選題到分發的工作流</li>
+            <li>校準品牌語氣的 Prompt 模板庫</li>
+            <li>內容再利用鏈：一則變多則</li>
             <li>簡易數據追蹤機制</li>
             <li>團隊訓練與交接文件</li>
           </ul>
+          <p class="svc-foot">方法交到你們手上，讓你們自己能跑。</p>
         </div>
-        <p class="svc-foot">我不是給你一堆 prompt 就走，是把方法交到你們手上，讓你們自己能跑。</p>
       </article>
     </div>
   </div>
@@ -428,7 +425,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brass);outline-of
     <div class="sec-head">
       <div>
         <div class="eyebrow rv">經歷</div>
-                <h2 class="rv">實戰經歷</h2>
+        <h2 class="rv">實戰經歷</h2>
         <p class="rv" style="max-width:56ch;margin-top:14px;color:var(--slate);line-height:1.8">這些是我在成立 Eva Studio 之前，二十年職涯裡實際主導過的專案。現在，我把同一套做生意的方法，用在 Eva Studio 的客戶身上。</p>
       </div>
     </div>
@@ -495,9 +492,9 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--brass);outline-of
         <h2 class="rv">Eva Chang</h2>
       </div>
       <div class="rv">
-        <p>二十年職涯橫跨業務、行政營運與數位行銷。帶過九到十二人團隊；做過業務主管、曾管理海外辦公室、總經理特助與專案經理。</p>
+        <p>二十年職涯裡，我做過業務，也管過海外辦公室。一邊要懂怎麼把東西賣出去，一邊要懂公司怎麼運轉起來的。</p>
         <p>2020 年後專注於品牌與數位行銷，現在經營 Eva Studio，同時有自己的品牌 Glow Up Women。</p>
-                <p class="kicker">大部分行銷人是從創意入行的<br>我是從「這門生意怎麼運作」入行的</p>
+        <p class="kicker">大部分行銷人是從創意入行的<br>我是從「這門生意怎麼運作」入行的</p>
         <p class="rv" style="max-width:56ch;margin-top:16px;color:var(--slate);line-height:1.8">所以我不只討論策略。策略講完，我也能直接把內容做出來給你看——這兩件事，我都做得到。</p>
         <div class="about-meta">
           <a href="https://www.linkedin.com/in/evachang-marketing/" target="_blank" rel="noopener">LinkedIn →</a>

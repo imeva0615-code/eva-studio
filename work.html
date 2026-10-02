@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Eva Studio｜品牌行銷策略與執行</title>
-<meta name="description" content="Eva Studio 從業務與營運的角度看行銷，協助中小企業與品牌主規劃策略、建立內容標準，並把計畫落實成穩定的產出。">
+<title>作品與經歷｜Eva Studio</title>
+<meta name="description" content="Eva Studio 的案例與 Eva 的經歷。">
 <meta name="theme-color" content="#efe9d8">
-<meta property="og:title" content="Eva Studio｜品牌行銷策略與執行">
-<meta property="og:description" content="品牌行銷顧問：策略規劃、內容標準與穩定產出。">
+<meta property="og:title" content="作品與經歷｜Eva Studio">
+<meta property="og:description" content="從定方向、建標準到穩定產出，策略和執行不會斷在交接之間。">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2315211d'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-weight='700' font-size='40' fill='%23d4a960'%3EE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,12 +147,8 @@
 
   /* Pain — editorial statement, offset body */
   .pain .grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(1rem, 2vw, 2rem); }
-  .pain .grid { align-items: center; }
-  .pain-copy { grid-column: 1 / span 7; }
-  .pain-card { grid-column: 9 / span 4; }
-  .pain-card .sc-title { margin-top: 0; }
-  .pain h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 3.4vw, 2.75rem); line-height: 1.4; margin: 0; }
-  .pain p { margin: clamp(1.5rem, 3vw, 2.25rem) 0 0; max-width: 30em; color: var(--ink-soft); font-size: 1.125rem; }
+  .pain h2 { grid-column: 1 / span 10; font-family: var(--serif); font-weight: 600; font-size: clamp(1.9rem, 4.4vw, 3.5rem); line-height: 1.36; margin: 0; }
+  .pain p { grid-column: 7 / span 5; margin: clamp(2rem, 4vw, 3rem) 0 0; color: var(--ink-soft); font-size: 1.125rem; }
 
   /* Services — stacked editorial rows, outlined words fill as they arrive */
   .services { background: var(--paper); }
@@ -166,8 +162,6 @@
   .service + .service { padding-left: 2.25rem; border-left: 1px solid var(--paper-line); }
   .service::before { content: ""; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--paper); border: 1px solid var(--brass); transition: background-color .4s ease; }
   .service + .service::before { left: -5px; }
-  .s-ic { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; margin-bottom: 1.25rem; border-radius: 50%; background: linear-gradient(180deg, #fffdf9, #f1ebdd); box-shadow: inset 0 0 0 1px rgba(140,100,36,.18), 0 10px 22px -12px rgba(110,86,40,.5); }
-  .s-ic svg { width: 1.45rem; height: 1.45rem; fill: none; stroke: var(--brass-ink); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
   .service .word {
     margin: 0; font-family: var(--serif); font-weight: 700; font-size: clamp(3rem, 6vw, 4.8rem); line-height: 1; letter-spacing: .04em;
     color: transparent; -webkit-text-stroke: 1.2px var(--ink);
@@ -224,16 +218,6 @@
   .d-l.l2 { left: 50%; top: 42%; transform: translateX(-50%); color: var(--brass-light); }
   .d-l.l3 { right: 4.5%; top: 84%; color: var(--parchment); }
 
-  /* Soft card (double-bezel) used for small illustrations */
-  .soft-card { padding: 1.5rem 1.5rem 1.25rem; border-radius: 22px; background: linear-gradient(180deg, #fffdf9, #f6f1e6); box-shadow: inset 0 1px 0 #fff, 0 0 0 6px rgba(255,255,255,.5), 0 0 0 7px rgba(21,33,29,.06), 0 30px 60px -34px rgba(110,86,40,.5); }
-  .sc-title { margin: 0 0 1rem; font-size: .875rem; color: var(--muted); letter-spacing: .04em; }
-  .sc-row { display: flex; justify-content: space-between; align-items: center; padding: .8rem 0; border-top: 1px solid var(--paper-line); font-size: 1rem; color: var(--ink-soft); }
-  .sc-row i { font-style: normal; display: inline-flex; align-items: center; justify-content: center; width: 1.6rem; height: 1.6rem; border-radius: 50%; font-size: .8125rem; }
-  .sc-row .ok { background: #ece5d6; color: var(--ink-soft); }
-  .sc-row.q { margin-top: .4rem; padding: .85rem 1rem; border: 1px dashed rgba(140,100,36,.5); border-radius: 12px; color: var(--ink); font-weight: 500; }
-  .sc-row .qm { background: var(--brass); color: var(--ink); font-weight: 700; animation: pulse 2.4s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(184,134,59,.45); } 50% { box-shadow: 0 0 0 8px rgba(184,134,59,0); } }
-
   /* Featured cases — two side by side */
   .cases-feat .head { display: flex; flex-direction: column; margin-bottom: clamp(2rem, 4vw, 3rem); }
   .cases-feat h2 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.4; margin: 0; }
@@ -286,14 +270,6 @@
   .contact h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(2rem, 4.2vw, 3.2rem); line-height: 1.28; margin: 0 0 1.5rem; }
   .contact .intro { color: var(--ink-soft); margin: 0; max-width: 22em; }
 
-  .steps { list-style: none; margin: 2.25rem 0 1.75rem; max-width: 22rem; }
-  .steps li { display: flex; align-items: center; gap: .9rem; padding: .75rem 0; border-top: 1px solid var(--paper-line); font-size: 1rem; color: var(--ink-soft); }
-  .steps li:first-child { border-top: 0; padding-top: 0; }
-  .steps b { display: inline-flex; align-items: center; justify-content: center; width: 1.9rem; height: 1.9rem; border-radius: 50%; font-family: "Fraunces", var(--serif); font-weight: 600; font-size: .9375rem; color: var(--brass-ink); box-shadow: inset 0 0 0 1px rgba(140,100,36,.35); }
-  .line-btn { display: inline-flex; align-items: center; gap: .75rem; padding: .45rem 1.2rem .45rem .45rem; border-radius: 999px; text-decoration: none; color: var(--ink); background: rgba(255,255,255,.6); box-shadow: inset 0 0 0 1px rgba(21,33,29,.12); font-size: .9375rem; transition: box-shadow .3s ease, transform .5s cubic-bezier(.32,.72,0,1); }
-  .line-btn i { font-style: normal; display: inline-flex; align-items: center; justify-content: center; height: 2rem; padding: 0 .7rem; border-radius: 999px; background: #06c755; color: #fff; font-family: var(--sans); font-weight: 700; font-size: .75rem; letter-spacing: .04em; }
-  .line-btn:hover { box-shadow: inset 0 0 0 1px rgba(21,33,29,.25); }
-  .line-btn:active { transform: scale(.98); }
   form { display: grid; gap: 1.7rem; }
   .field-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.7rem; }
   label { display: block; font-size: .9375rem; margin-bottom: .2rem; color: var(--ink-soft); }
@@ -337,13 +313,12 @@
   .reveal.in { opacity: 1; transform: none; }
 
   @media (max-width: 860px) {
-    .pain-copy, .pain-card, .pain h2, .pain p, .services .intro h2, .case .aside, .case .body, .contact .lead, .contact .form-col { grid-column: 1 / -1; }
+    .pain h2, .pain p, .services .intro h2, .case .aside, .case .body, .contact .lead, .contact .form-col { grid-column: 1 / -1; }
     .service-row { grid-template-columns: 1fr; }
     .rail { display: none; }
     .service, .service + .service { padding: 2rem 0 1.75rem; border-left: 0; border-top: 1px solid var(--paper-line); }
     .service::before { display: none; }
     .case .body { margin-top: 3rem; }
-    .pain-card { margin-top: 2.5rem; max-width: 26rem; }
     .contact .form-col { margin-top: 3rem; }
     .work .grid { grid-template-columns: 1fr; }
     .field-pair { grid-template-columns: 1fr; }
@@ -356,10 +331,39 @@
     .hero h1 .line > span, .pill-tag, .hero .sub, .hero .btn, .chip, .flow-node, .goal { animation: none !important; transform: none; opacity: 1; }
     .flow-line { animation: none; stroke-dashoffset: 0; }
     .reveal, .stagger > * { opacity: 1; transform: none; transition: none; }
-    .sc-row .qm { animation: none; }
     .clip img { clip-path: none; transition: none; }
     .service .word { background-size: 100% 100%; transition: none; }
     .rail::before { transition: none; }
+  }
+
+  .page-head { position: relative; background: radial-gradient(120% 90% at 85% 40%, #f7f3ea 0%, var(--parchment) 55%, #e9e2cf 100%); color: var(--ink); padding: calc(10rem + env(safe-area-inset-top, 0px)) 0 clamp(4rem, 8vw, 5.5rem); overflow: hidden; isolation: isolate; }
+  .page-head h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.6rem, 6.4vw, 5.2rem); line-height: 1.15; margin: 0 0 1.25rem; }
+  .page-head p { color: var(--ink-soft); max-width: 32em; margin: 0; font-size: 1.125rem; }
+  .cases { padding-top: clamp(4rem, 8vw, 6rem); }
+  .row, .feature { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(1rem, 2vw, 2rem); padding: clamp(2.75rem, 5vw, 4rem) 0; border-top: 1px solid var(--paper-line); align-items: start; }
+  .cases .row:first-child, .cases .feature:first-child { border-top: 0; padding-top: 0; }
+  .row > div:first-child { grid-column: 1 / span 4; }
+  .row > div:last-child { grid-column: 6 / span 7; }
+  .feature > img { grid-column: 1 / span 5; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; background: var(--parchment-deep); }
+  .feature > div { grid-column: 7 / span 6; }
+  .feature .cat, .row .cat { font-size: .875rem; color: var(--brass-ink); margin: 0 0 .5rem; }
+  .feature h3, .row h3 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.3rem, 2.3vw, 1.7rem); line-height: 1.4; margin: 0 0 1.1rem; }
+  .feature p, .row p { margin: 0 0 1rem; color: var(--ink-soft); max-width: 34em; }
+  .metrics { display: flex; flex-wrap: wrap; gap: 2.5rem; margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--paper-line); }
+  .metric .v { font-family: var(--serif); font-weight: 700; font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1; letter-spacing: -.01em; }
+  .metric .l { font-size: .875rem; color: var(--muted); margin-top: .6rem; max-width: 22em; line-height: 1.5; }
+  .row-img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 1.5rem; box-shadow: 0 1px 0 var(--paper-line); }
+  .about { background: var(--paper); }
+  .about .grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: clamp(1rem, 2vw, 2rem); }
+  .about h2 { grid-column: 1 / span 4; font-family: var(--serif); font-weight: 700; font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: 0; }
+  .about .grid > div { grid-column: 6 / span 7; }
+  .about p { margin: 0 0 1.1rem; color: var(--ink-soft); max-width: 34em; }
+  .about .kicker { font-family: var(--serif); font-weight: 600; font-size: clamp(1.2rem, 2.2vw, 1.5rem); color: var(--ink); line-height: 1.6; margin: 2rem 0; letter-spacing: 0; }
+  .cta-band .inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; border-top: 1px solid var(--ink); padding-top: 2.5rem; }
+  .cta-band h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(1.8rem, 3.6vw, 2.8rem); margin: 0; line-height: 1.3; }
+  @media (max-width: 860px) {
+    .row > div:first-child, .row > div:last-child, .feature > img, .feature > div, .about h2, .about .grid > div { grid-column: 1 / -1; }
+    .row > div:last-child, .feature > div, .about .grid > div { margin-top: 1.5rem; }
   }
 </style>
 </head>
@@ -368,239 +372,121 @@
 
 <header class="site-header" id="header">
   <div class="wrap">
-    <a href="#top" class="wordmark" aria-label="Eva Studio 首頁"><span class="w-eva">Eva</span><span class="w-dot" aria-hidden="true"></span><span class="w-studio">Studio</span></a>
-    <a href="#contact" class="header-link" data-track="header_cta">填寫需求表單</a>
+    <a href="index.html" class="wordmark" aria-label="Eva Studio 首頁"><span class="w-eva">Eva</span><span class="w-dot" aria-hidden="true"></span><span class="w-studio">Studio</span></a>
+    <a href="index.html#contact" class="header-link" data-track="header_cta">填寫需求表單</a>
   </div>
 </header>
 
 <main id="main">
-<div id="top"></div>
-  <!-- 1. 定位 -->
-  <section class="hero" id="hero">
+  <section class="page-head" id="hero">
     <svg class="contours" viewBox="0 0 600 400" aria-hidden="true" preserveAspectRatio="xMinYMin slice">
       <g fill="none" stroke="currentColor" stroke-width="1">
-        <path d="M-40 120 C 80 60, 160 160, 300 70 S 520 -10, 640 40"/>
-        <path d="M-40 140 C 80 80, 170 180, 310 90 S 520 10, 640 60"/>
-        <path d="M-40 160 C 80 100, 180 200, 320 110 S 520 30, 640 80"/>
-        <path d="M-40 180 C 80 120, 190 220, 330 130 S 520 50, 640 100"/>
-        <path d="M-40 200 C 80 140, 200 240, 340 150 S 520 70, 640 120"/>
-        <path d="M-40 220 C 80 160, 210 260, 350 170 S 520 90, 640 140"/>
-        <path d="M-40 240 C 80 180, 220 280, 360 190 S 520 110, 640 160"/>
+        <path d="M-40 120 C 80 60, 160 160, 300 70 S 520 -10, 640 40"/><path d="M-40 140 C 80 80, 170 180, 310 90 S 520 10, 640 60"/>
+        <path d="M-40 160 C 80 100, 180 200, 320 110 S 520 30, 640 80"/><path d="M-40 180 C 80 120, 190 220, 330 130 S 520 50, 640 100"/>
+        <path d="M-40 200 C 80 140, 200 240, 340 150 S 520 70, 640 120"/><path d="M-40 220 C 80 160, 210 260, 350 170 S 520 90, 640 140"/>
       </g>
     </svg>
-    <div class="paper" aria-hidden="true">
-      <span class="sheet s1"></span><span class="sheet s2"></span><span class="sheet s3"></span>
-    </div>
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="pill-tag">品牌行銷顧問・策略規劃與執行</p>
-        <h1>
-          <span class="line"><span>讓你的行銷有方向、有標準，</span></span>
-          <span class="line"><span>每一步都對準營收。</span></span>
-        </h1>
-        <p class="sub">Eva Studio 從業務與營運的角度看行銷，協助中小企業與品牌主規劃策略、建立內容標準，並把計畫落實成穩定的產出，讓每一分行銷預算發揮最大效益。</p>
-        <a href="#contact" class="btn" data-track="hero_cta"><span>談談你的狀況</span><i class="btn-ic" aria-hidden="true">→</i></a>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <svg class="flow" viewBox="0 0 520 520">
-          <path class="flow-line" d="M20 470 C 120 470, 110 330, 200 320 S 290 210, 360 190 S 470 200, 500 200" />
-          <circle class="flow-node" cx="20" cy="470" r="6"/><circle class="flow-node" cx="200" cy="320" r="6"/><circle class="flow-node" cx="360" cy="190" r="6"/><circle class="flow-node end" cx="500" cy="200" r="8"/>
-        </svg>
-        <div class="chip c1"><div class="chip-core"><b>方向</b><span>Direction</span><i class="bar"></i><i class="bar short"></i></div></div>
-        <div class="chip c2"><div class="chip-core"><b>標準</b><span>Standards</span><i class="bar"></i><i class="bar short"></i></div></div>
-        <div class="chip c3"><div class="chip-core"><b>產出</b><span>Output</span><i class="bar"></i><i class="bar short"></i></div></div>
-        <p class="goal">效益最大化</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. 痛點 -->
-  <section class="block pain">
-    <div class="wrap grid">
-      <div class="pain-copy">
-        <h2 class="reveal">行銷做了很多，<br>卻說不出哪一件真的有用？</h2>
-        <p>貼文照發、活動照辦，每次要決定下一步，還是只能憑感覺。花出去的時間和預算，很難說清楚到底換回了什麼。</p>
-      </div>
-      <div class="soft-card pain-card stagger" aria-hidden="true">
-        <p class="sc-title">目前的行銷</p>
-        <div class="sc-row"><span>貼文已發布</span><i class="ok">✓</i></div>
-        <div class="sc-row"><span>活動已舉辦</span><i class="ok">✓</i></div>
-        <div class="sc-row"><span>廣告已投放</span><i class="ok">✓</i></div>
-        <div class="sc-row q"><span>哪一件真的有用？</span><i class="qm">?</i></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. 三個服務 -->
-  <section class="block services" id="services">
     <div class="wrap">
-      <div class="sec-head"><div><p class="kicker">服務項目</p><h2 class="reveal">先確認方向，再把做法變成標準，<br>最後讓產出跟得上。</h2></div><p class="en" aria-hidden="true">Services</p></div>
-      <div class="rail" id="rail"></div>
-      <div class="service-row">
-        <article class="service">
-          <span class="s-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
-          <p class="word">方向</p>
-          <p class="w-en">Direction</p>
-          <h3>先確認該往哪裡走</h3>
-          <p>投入更多預算之前，先透過訪談、數據和實際測試，找出客戶真正在意什麼、哪條路值得走。</p>
-        </article>
-        <article class="service">
-          <span class="s-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M8 9l1.5 1.5L12 8M8 15l1.5 1.5L12 14M14.5 9.5H17M14.5 15.5H17"/></svg></span>
-          <p class="word">標準</p>
-          <p class="w-en">Standards</p>
-          <h3>讓品質不再靠運氣</h3>
-          <p>把「這篇能不能發」「成效怎麼看」變成團隊能照著跑的判斷流程，不必每件事都等老闆親自把關。</p>
-        </article>
-        <article class="service">
-          <span class="s-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18h16M6 18v-4M10 18v-7M14 18v-5M18 18V7"/><path d="M15 7h3v3"/></svg></span>
-          <p class="word">產出</p>
-          <p class="w-en">Output</p>
-          <span class="tag">行銷專案 AI 導入</span>
-          <h3>讓內容產出跟得上</h3>
-          <p>把重複又耗時的環節交給工具，讓內容產出變快、也變穩定。判斷和創意，仍然留在人手上。</p>
-        </article>
-      </div>
+      <h1>作品與經歷</h1>
+      <p>從市場驗證、整合專案到內容產出的實際案例。</p>
     </div>
   </section>
 
-  <!-- 4. 精選案例 -->
-  <section class="block cases-feat" id="case">
+  <section class="block cases">
     <div class="wrap">
-      <div class="sec-head">
-        <div><p class="kicker">精選案例</p><h2 class="reveal">從市場驗證到品牌上線</h2></div>
-        <p class="en" aria-hidden="true">Selected Work</p>
-      </div>
-      <div class="pair stagger">
-        <article class="cf">
-          <p class="cat">軟體服務</p>
-          <div class="cf-img diagram" role="img" aria-label="策略調整示意：原本直接切入小型商家受阻，改從一般消費者切入，再以使用者規模說服商家">
-            <p class="d-big"><span class="count" data-to="1">1</span> 個月</p>
-            <svg viewBox="0 0 800 334" preserveAspectRatio="none" aria-hidden="true">
-              <path class="d-dash" d="M70 262 L 330 262" />
-              <path class="d-x" d="M322 254 L 338 270 M338 254 L 322 270" />
-              <path class="d-path" d="M70 262 C 190 262, 250 186, 400 186 C 550 186, 610 262, 730 262" />
-              <circle class="d-node" cx="70" cy="262" r="6" />
-              <circle class="d-node" cx="400" cy="186" r="6" />
-              <circle class="d-node fill" cx="730" cy="262" r="7" />
-            </svg>
-            <span class="d-l l1">原定：小型商家</span>
-            <span class="d-l l2">先從一般消費者切入</span>
-            <span class="d-l l3">再說服商家</span>
-          </div>
-          <h3>市場驗證與目標客群調整</h3>
+      <article class="row" id="saas">
+        <div><p class="cat">軟體服務</p><h3>市場驗證與目標客群調整</h3></div>
+        <div>
           <p>透過實地訪談驗證市場，找出推廣阻力，重新定義目標客群與切入策略。</p>
-          <p class="outcome">客戶在一個月後採納新方向。</p>
-        </article>
-        <article class="cf">
-          <p class="cat">FUMI 富美選物</p>
-          <div class="cf-img"><img src="case-fumi.jpg" alt="FUMI 富美選物第一波銷售頁" loading="lazy" width="1600" height="669"></div>
-          <h3>二手大尺碼選物，從選品到開賣</h3>
-          <p>規劃每一波的選品，打造銷售頁與下單流程，並用 LINE 經營開賣通知。</p>
-          <p class="outcome">選品、網站、社群一次到位。</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4b. 更多作品 -->
-  <section class="block work" id="work">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="kicker">更多作品</p><h2><a href="work.html" class="text-link" data-track="work_page">看完整作品與經歷</a></h2></div>
-        <p class="en" aria-hidden="true">More Work</p>
-      </div>
-      <div class="grid">
-        <a class="feature-card" href="work.html#jewelry">
-          <div class="img clip"><img src="case-jewelry.jpg" alt="飾品品牌母親節社群廣告素材" loading="lazy" width="1080" height="1080"></div>
-          <div class="meta">
-            <div><p class="cat">飾品品牌</p><h3>年度行銷策略與電商活動</h3></div>
-            <div class="stat"><span class="result"><span class="count" data-to="2">2</span> 倍</span><span class="stat-l">單季電商銷售額成長</span></div>
+          <div class="metrics">
+            <div class="metric"><div class="v">1 個月</div><div class="l">客戶在一個月後採納新方向</div></div>
           </div>
-        </a>
-        <ul class="index-list stagger">
-          <li><a href="work.html#agency">
-            <div class="thumb"><span>NT$<br>400萬</span></div>
-            <div><p class="cat">智能行銷公司</p><h3>整合專案總 PM</h3><p>3 方團隊跨團隊合作，從提案到執行。</p></div>
-          </a></li>
-          <li><a href="work.html#publishing">
-            <div class="thumb"><img src="case-publishing.jpg" alt="出版顧問品牌 MBTI 主題 IG 輪播內容" loading="lazy" width="1080" height="1080"></div>
-            <div><p class="cat">出版顧問品牌</p><h3>品牌內容與活動視覺</h3><p>主導 14 週年活動視覺與每月 IG 內容。</p></div>
-          </a></li>
-          <li><a href="work.html#care">
-            <div class="thumb"><span>100%</span></div>
-            <div><p class="cat">長照機構</p><h3>疫情期間募款企劃</h3><p>年度募款目標達成。</p></div>
-          </a></li>
-          <li><a href="work.html#glowup">
-            <div class="thumb"><span>GlowUp<br>Women</span></div>
-            <div><p class="cat">自有品牌</p><h3>品牌 0 到 1 建置</h3><p>從品牌定位、內容策略到官網建置。</p></div>
-          </a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. CTA -->
-  <section class="block contact" id="contact">
-    <div class="wrap grid">
-      <div class="lead">
-        <h2>先聊聊，<br>你現在卡在哪裡</h2>
-        <p class="intro">填一份簡短的表單，告訴我你的產業和目前的狀況。看過之後，我會和你約一次 30 分鐘的線上對談。</p>
-        <ol class="soft-card steps stagger">
-          <li><b>1</b><span>填寫需求表單</span></li>
-          <li><b>2</b><span>我先看過你的狀況</span></li>
-          <li><b>3</b><span>30 分鐘線上對談</span></li>
-        </ol>
-        <a class="line-btn" href="https://lin.ee/YjquMEM" target="_blank" rel="noopener" data-track="line_click"><i aria-hidden="true">LINE</i><span>習慣用 LINE？加入官方帳號</span></a>
-      </div>
-      <div class="form-col">
-        <form id="intake" action="https://formspree.io/f/xvzjejyo" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="Eva Studio 新需求表單">
-          <div class="field-pair">
-            <div>
-              <label for="name">你的名字</label>
-              <input id="name" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-          </div>
-          <div class="field-pair">
-            <div>
-              <label for="brand">公司或品牌名稱</label>
-              <input id="brand" name="brand" type="text" autocomplete="organization" required>
-            </div>
-            <div>
-              <label for="industry">產業</label>
-              <input id="industry" name="industry" type="text" placeholder="例如：餐飲、美業、軟體服務" required>
-            </div>
-          </div>
-          <div>
-            <label for="need">目前最想先處理的是</label>
-            <select id="need" name="need" required>
-              <option value="" disabled selected>請選擇</option>
-              <option>方向：不確定該往哪裡走</option>
-              <option>標準：做了很多，但品質和成效不穩定</option>
-              <option>產出：想做的內容太多，產出跟不上</option>
-              <option>還不確定，想先聊聊</option>
-            </select>
-          </div>
-          <div>
-            <label for="situation">目前的狀況 <span class="opt">（選填）</span></label>
-            <textarea id="situation" name="situation" placeholder="例如：現在有哪些人在做行銷、試過什麼、哪裡卡住了"></textarea>
-          </div>
-          <p class="form-error" id="form-error" role="alert"></p>
-          <div class="form-actions">
-            <button type="submit" class="btn" id="submit-btn"><span>送出表單</span><i class="btn-ic" aria-hidden="true">→</i></button>
-            <p class="form-note">資料只會用來了解你的需求。</p>
-          </div>
-        </form>
-
-        <div class="thanks" id="thanks" tabindex="-1">
-          <h3>表單已送出</h3>
-          <p>我看過你的狀況後，會用 Email 和你約時間。如果想先挑時段，也可以直接預約 30 分鐘的線上對談。</p>
-          <a class="btn" href="https://calendly.com/lmeva0615/30min" target="_blank" rel="noopener" data-track="calendly_click"><span>預約對談時段</span><i class="btn-ic" aria-hidden="true">→</i></a>
         </div>
+      </article>
+
+      <article class="row" id="fumei">
+        <div><p class="cat">FUMI 富美選物</p><h3>選品、銷售頁與 LINE 社群</h3></div>
+        <div>
+          <img class="row-img" src="case-fumi.jpg" alt="FUMI 富美選物第一波銷售頁" loading="lazy" width="1600" height="669">
+          <h3>二手大尺碼選物，從選品到開賣</h3>
+          <p>為 2L–3L 身形挑選二手衣物，規劃每一波的選品，打造銷售頁，包含商品文案、組合優惠與下單流程，並用 LINE 經營下單與下一波通知。</p>
+        </div>
+      </article>
+
+      <article class="row" id="agency">
+        <div><p class="cat">智能行銷公司</p><h3>總經理行銷特助暨專案經理</h3></div>
+        <div>
+          <p>導入 AI 工具，建立自動化市場分析與內容生成系統，縮短專案前置期。橫跨敏捷測試案與大型整合案兩種量級，擔任專案總指揮，統籌行銷、技術、設計跨職能團隊，並優化跨部門溝通流程、建立協作 SOP。</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">NT$400萬</div><div class="l">整合專案總 PM，從提案到執行完整主導</div></div>
+            <div class="metric"><div class="v">3 方團隊</div><div class="l">跨團隊合作</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature" id="jewelry">
+        <img src="case-jewelry.jpg" alt="飾品品牌母親節社群廣告發文素材" loading="lazy">
+        <div>
+          <p class="cat">飾品品牌</p>
+          <h3>數位行銷與品牌企劃</h3>
+          <p>主導品牌年度行銷策略，整合社群平台（FB／IG／LINE@）與季節檔期。企劃 KOL 合作與用戶生成內容，策劃電商平台（momo、Yahoo、Pinkoi）行銷活動，搭配 SEO 優化與內容行銷，並統籌 O2O 品牌活動，串接實體轉單與會員再行銷。</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">100%</div><div class="l">3 個月社群互動率成長，LINE@ 好友數翻倍</div></div>
+            <div class="metric"><div class="v">2 倍</div><div class="l">單季電商銷售額成長</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="row" id="care">
+        <div><p class="cat">長照機構</p><h3>行銷企劃</h3></div>
+        <div>
+          <p>疫情高峰期間重新設計 O2O 募款企劃，以故事性社群文案擴大捐款人認知與社區支持度。</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">100%</div><div class="l">年度募款目標達成</div></div>
+            <div class="metric"><div class="v">80%+</div><div class="l">社群互動率提升</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature" id="publishing">
+        <img src="case-publishing.jpg" alt="出版顧問品牌 MBTI 主題 IG 輪播內容設計" loading="lazy">
+        <div>
+          <p class="cat">出版顧問品牌</p>
+          <h3>品牌內容與視覺企劃</h3>
+          <p>規劃活動視覺與每月內容。製作 14 週年開幕活動的邀請函與倒數視覺，設計一系列把 MBTI 人格類型轉譯為職涯與生活風格洞察的 IG 輪播內容，並負責 Podcast 節目封面與每集圖像設計，維持主持人個人品牌調性一致。</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">14 週年</div><div class="l">品牌週年活動視覺主導，涵蓋邀請函、倒數素材與現場物料</div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="row" id="glowup">
+        <div><p class="cat">自有品牌</p><h3>GlowUp Women<br>品牌 0 到 1 建置</h3></div>
+        <div>
+          <p>從零建立品牌定位、內容策略、官網與數據追蹤系統。</p>
+          <p><a href="https://glowupwomen.com" class="text-link" target="_blank" rel="noopener">前往 glowupwomen.com</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block about" id="about">
+    <div class="wrap grid">
+      <h2>關於 Eva</h2>
+      <div>
+        <p>二十年職涯裡，我從業務、營運一路做到行銷，2020 年起專注於品牌與數位行銷。</p>
+        <p>賣東西和讓公司運轉，這兩段經驗讓我習慣先問：這門生意怎麼賺錢？行銷要幫上哪一段？</p>
+        <p class="kicker">大部分行銷人從創意入行，我從「這門生意怎麼運作」入行。</p>
+        <p><a href="https://www.linkedin.com/in/evachang-marketing/" class="text-link" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block cta-band" id="contact">
+    <div class="wrap">
+      <div class="inner">
+        <h2>先聊聊，你現在卡在哪裡</h2>
+        <a href="index.html#contact" class="btn" data-track="work_cta"><span>填寫需求表單</span><i class="btn-ic" aria-hidden="true">→</i></a>
       </div>
     </div>
   </section>
@@ -609,10 +495,10 @@
 <footer class="site-footer" id="footer" data-dark>
   <div class="wrap">
     <div class="top">
-      <a href="#top" class="lockup" aria-label="Eva Studio 回到頂端">Eva<i aria-hidden="true"></i>Studio</a>
+      <a href="index.html" class="lockup" aria-label="Eva Studio 首頁">Eva<i aria-hidden="true"></i>Studio</a>
       <nav aria-label="頁尾連結">
-        <a href="work.html">作品與經歷</a>
-        <a href="#contact">填寫需求表單</a>
+        <a href="index.html">首頁</a>
+        <a href="index.html#contact">填寫需求表單</a>
         <a href="https://lin.ee/YjquMEM" target="_blank" rel="noopener" data-track="line_click">LINE 官方帳號</a>
         <a href="https://www.linkedin.com/in/evachang-marketing/" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
@@ -639,18 +525,11 @@
 
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); if (e.target.classList.contains('count')) countUp(e.target); } });
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: .35 });
-    document.querySelectorAll('.reveal, #rail, .service-row, .clip, .stagger, .count').forEach(function (el) { io.observe(el); });
+    document.querySelectorAll('.reveal, .svc').forEach(function (el) { io.observe(el); });
   } else {
-    document.querySelectorAll('.reveal, #rail, .clip, .stagger').forEach(function (el) { el.classList.add('in'); });
-  }
-
-  function countUp(el) {
-    var to = parseFloat(el.dataset.to), start = null, dur = 1200;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || to < 2) { el.textContent = to; return; }
-    function step(t) { if (!start) start = t; var p = Math.min((t - start) / dur, 1); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); }
-    el.textContent = 0; requestAnimationFrame(step);
+    document.querySelectorAll('.reveal, .svc').forEach(function (el) { el.classList.add('in'); });
   }
 
   var form = document.getElementById('intake');
@@ -668,7 +547,7 @@
         invalid.focus();
         return;
       }
-      btn.disabled = true; btn.firstChild.textContent = '送出中…';
+      btn.disabled = true; btn.textContent = '送出中…';
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
         .then(function (res) {
           if (!res.ok) throw new Error('failed');
@@ -679,7 +558,7 @@
         })
         .catch(function () {
           errorEl.textContent = '表單沒有送出成功。請確認網路連線後，再按一次「送出表單」。';
-          btn.disabled = false; btn.firstChild.textContent = '送出表單';
+          btn.disabled = false; btn.textContent = '送出表單';
         });
     });
   }
